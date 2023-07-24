@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { IpfsImage } from "react-ipfs-image";
 
 function NftCard({ number }) {
   const [image, setImage] = useState("");
@@ -8,12 +7,7 @@ function NftCard({ number }) {
   return (
     <div className="bg-[#764ba2] bg-opacity-40 py-6 px-4 rounded-lg">
       <div className=" relative">
-        <IpfsImage
-          hash={image}
-          gatewayUrl="https://gateway.pinata.cloud/ipfs"
-          alt="my image"
-          className="mt-2 rounded w-[50px] h-[50px]"
-        />
+        <Image src="/nft-img.jpg" height={150} width={200} />
       </div>
       <div className="flex justify-between mt-8 mb-4">
         <div>
