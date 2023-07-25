@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 function NftCard({ number }) {
   const [image, setImage] = useState("");
 
@@ -26,7 +26,7 @@ function NftCard({ number }) {
         </button> */}
       </div>
 
-      <div></div>
+      <ConnectButton />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import { Inter } from "next/font/google";
@@ -91,7 +90,6 @@ export default function Home() {
       <main
         className={`${inter.className} bg-main-gradient min-h-screen text-lg px-12`}
       >
-        <ConnectButton />
         <Navbar />
         <Hero />
         {/* <MintForm /> */}

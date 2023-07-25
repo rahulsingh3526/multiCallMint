@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 import { Kanit } from "next/font/google";
 
@@ -25,9 +26,7 @@ function Hero() {
             {/* <button className="bg-[#7ec53a] py-3 px-6 font-semibold rounded-full">
               Explore
             </button> */}
-            <button className="border-2 rounded-full px-4 py-2">
-              Get an NFT
-            </button>
+            <ConnectButton />
           </div>
         </div>
         <div className=" justify-self-center mt-12 md:mt-0 md:justify-self-end order-2">
