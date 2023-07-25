@@ -22,7 +22,7 @@ export default function NFTBalanceMultiCall(props) {
       { start: 0, perPage: 5, direction: "increment" }
     ),
   });
-  console.log(data);
+  console.log("data", data);
   return (
     <div className="flex flex-col gap-4">
       {data?.pages[0].map((x, index) => (

@@ -55,7 +55,7 @@ export default function Home() {
     functionName: "mint",
     args: [1, { value: "10000000000000000" }],
   });
-  const { isLoading, isSuccess, writeAsync } = useContractWrite(config);
+  const { isLoading, isSuccess, write } = useContractWrite(config);
 
   const { data } = useContractRead({
     address: `0x${currentContractData?.address}`,
@@ -63,7 +63,7 @@ export default function Home() {
     functionName: "mint",
     watch: true,
   });
-
+  // console.log(data);
   const { data: tokenIdData } = useContractRead({
     address: `0x${currentContractData?.address}`,
     abi: currentContractData?.abi,
@@ -72,19 +72,20 @@ export default function Home() {
     watch: true,
   });
 
-  async function handleChange() {
+  // console.log(tokenIdData);
+  function handleChange() {
     setMintSuccess(false);
     try {
-      await writeAsync?.();
+      write?.();
       setMintSuccess(true);
     } catch (error) {
-      console.error(error);
+      console.error("haha", error);
     }
 
-    setTask("");
+    // setTask("");
   }
 
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <main
@@ -111,7 +112,7 @@ export default function Home() {
           <div className=" m-5">
             <button
               className="btn btn-outline btn-success"
-              disabled={!writeAsync}
+              // disabled={!writeAsync}
               onClick={handleChange}
             >
               Mint
