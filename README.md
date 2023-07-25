@@ -1,6 +1,6 @@
 ## [Youtube link to project ](https://www.youtube.com/watch?v=6GTCfII_aF0)
 
-
+Just check there is a error in the file that It is only working on my wallet address and not working on any other wallet address.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
