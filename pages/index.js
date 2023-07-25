@@ -95,7 +95,9 @@ export default function Home() {
         {/* <MintForm /> */}
 
         <div className=" flex flex-col items-center justify-around bg-p-light w-full px-40">
-          <p className="font-bold text-p-extra m-5">nft quantity to mint</p>
+          <p className="font-bold text-p-extra m-5">
+            Enter Nft quantity to mint
+          </p>
           {mintSuccess && <ReactConfetti />}
 
           <input
