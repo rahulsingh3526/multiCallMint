@@ -53,7 +53,7 @@ export default function Home() {
     address: `0x${currentContractData?.address}`,
     abi: currentContractData?.abi,
     functionName: "mint",
-    args: [task, { value: "10000000000000000" }],
+    args: [1, { value: "10000000000000000" }],
   });
   const { isLoading, isSuccess, writeAsync } = useContractWrite(config);
 
@@ -95,18 +95,18 @@ export default function Home() {
         {/* <MintForm /> */}
 
         <div className=" flex flex-col items-center justify-around bg-p-light w-full px-40">
-          <p className="font-bold text-p-extra m-5">
+          {/* <p className="font-bold text-p-extra m-5">
             Enter Nft quantity to mint
-          </p>
+          </p> */}
           {mintSuccess && <ReactConfetti />}
 
-          <input
+          {/* <input
             type="number"
             className=" border border-p-extra rounded w-full py-2 px-3 mb-3 text-blue-700 m-5"
             placeholder="nft quantity"
             value={task}
             onChange={(e) => setTask(e.target.value)}
-          />
+          /> */}
 
           <div className=" m-5">
             <button
